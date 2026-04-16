@@ -8,6 +8,9 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
+/*
+5. Typos - Проверить соответствие параграфа орфографии
+ */
 public class TyposTest {
 
     @Test

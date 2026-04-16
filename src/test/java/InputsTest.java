@@ -9,6 +9,11 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
+/*
+4. Inputs - Проверить на возможность ввести различные цифровые и
+нецифровые значения, используя Keys.ARROW_UP И
+Keys.ARROW_DOWN
+ */
 public class InputsTest {
 
     @Test

@@ -8,6 +8,11 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
+/*
+2. Checkboxes - проверить, что первый чекбокс unchecked, отметить
+первый чекбокс, проверить что он checked. Проверить, что второй чекбокс
+checked, сделать unheck, проверить, что он unchecked
+ */
 public class CheckBoxesTest {
 
     @Test

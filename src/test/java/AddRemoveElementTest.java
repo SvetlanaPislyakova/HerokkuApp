@@ -7,6 +7,10 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
+/*
+1. Add/Remove Elements - добавить 2 элемента, удалить элемент,
+проверить количество элементов DELETE
+ */
 public class AddRemoveElementTest {
 
     @Test
