@@ -12,7 +12,7 @@ import java.time.Duration;
 8. * Notification Messages - кликнуть на кнопку, дождаться появления
 нотификации, проверить соответствие текста ожиданиям
  */
-public class NotificationMessageText {
+public class NotificationMessageTest {
 
     @Test
     public void checkNotificationMessage() {
