@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 
@@ -34,15 +35,17 @@ public class DynamicControlsTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+        SoftAssert softAssert = new SoftAssert();
 
         driver.findElement(By.xpath("//*[text()='Remove']")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("checkbox")));
         WebElement input = driver.findElement(By.xpath("//input[@type='text']"));
-        assertNotNull(input.getAttribute("disabled"));
+        softAssert.assertNotNull(input.getAttribute("disabled"));
         driver.findElement(By.xpath("//*[@onclick='swapInput()']")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
-        assertTrue(input.isEnabled());
+        softAssert.assertTrue(input.isEnabled());
         driver.quit();
+        softAssert.assertAll();
     }
 }
